@@ -1,4 +1,7 @@
 export default {
+  publicRuntimeConfig: {
+    secureToken: process.env.SECURE_TOKEN,
+  },
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
 

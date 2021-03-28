@@ -7,12 +7,12 @@
 
 <script>
 export default {
-  async asyncData({ $axios }) {
+  async asyncData({ $axios, $config: { secureToken } }) {
     const response = await $axios.$get(
       'https://jsonplaceholder.typicode.com/todos/1',
       {
         headers: {
-          'X-AUTH-TOKEN': '### TOKEN HARDCODED ###',
+          'X-AUTH-TOKEN': secureToken,
           'Content-Type': 'application/json',
         },
       }
